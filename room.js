@@ -37,10 +37,10 @@ function addRoom() {
     var roomName = document.getElementById("roomName").value;
     firebase.database().ref("/").child(roomName).update({ purpose: "adding Room Name" })
     localStorage.setItem("roomName", roomName);
-    window.location = "kwitter_page.html"
+    window.location = "page.html"
 }
 
 function redirectToRoom(id){
     localStorage.setItem("roomName", id);
-    window.location = "kwitter_page.html"
+    window.location = "page.html"
 }
